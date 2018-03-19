@@ -18,7 +18,9 @@ server.post("/marcedes", function (req, res) {
   console.log(actions)
   switch (actions) {
     case "wbt":
-
+      return res.json({
+        "speech": "sdfg"
+      });
       break;
     case "report":
       var name = req.body.result.parameters.name;

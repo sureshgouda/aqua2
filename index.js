@@ -160,7 +160,7 @@ server.post("/marcedes", function (req, res) {
 
       }
       break;
-    case "wbtdetail":
+    case "training-info":
       var name = req.body.result.parameters.name;
       if (name == "Mathias" || name == "Vivek") {
         return res.json({

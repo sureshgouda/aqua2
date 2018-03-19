@@ -20,7 +20,7 @@ server.post("/marcedes", function (req, res) {
     case "wbt":
       return res.json({
         "speech": "sdfg",
-        "text":"hello"
+        "messages":["hello"]
       });
       break;
     case "report":

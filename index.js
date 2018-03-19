@@ -13,21 +13,12 @@ server.use(bodyParser.json());
 
 
 
-server.post("/echo", function (req, res) {
+server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
+  console.log(actions)
   switch (actions) {
     case "wbt":
-      var speech =
-        req.body.result &&
-          req.body.result.parameters &&
-          req.body.result.parameters.echoText
-          ? req.body.result.parameters.echoText
-          : "Seems like some problem. Speak again.";
-      return res.json({
-        speech: speech,
-        displayText: speech,
-        source: "echo"
-      });
+
       break;
     case "report":
       var name = req.body.result.parameters.name;

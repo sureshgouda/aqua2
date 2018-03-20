@@ -87,21 +87,6 @@ server.post("/marcedes", function (req, res) {
           break;
       }
       break;
-    default:
-      return res.json({
-        "messages": [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "text": ` Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
-              "menu": ["training document", "life training document"],
-              "link": ""
-            }
-          }]
-      });
     case "report":
       var name = req.body.result.parameters.name;
       switch (name) {
@@ -175,21 +160,7 @@ server.post("/marcedes", function (req, res) {
 
       }
       break;
-    default:
-      return res.json({
-        "messages": [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-              "menu": ["product realiability", "quick test"],
-              "link": ""
-            }
-          }]
-      });
+
     case "training-info":
       var name = req.body.result.parameters.name;
       if (name == "Mathias" || name == "Vivek") {
@@ -330,7 +301,7 @@ server.post("/marcedes", function (req, res) {
         });
       }
       break;
-      case 'report-category-detail':
+    case 'report-category-detail':
       var name = req.body.result.parameters.name;
       if (name == "Mathias" || name == "Vivek") {
         return res.json({

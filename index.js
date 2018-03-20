@@ -206,7 +206,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "",
-                "text": `Opens the PDF link for the document. `,
+                "text": `Sure`,
                 "menu": [],
                 "category": [
                   {

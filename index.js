@@ -98,7 +98,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "023",
                   "text": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
                   "menu": [],
                   "link": ""
@@ -114,7 +114,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "024",
                   "text": `You completed 50% of web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
                   "menu": [],
                   "link": ""
@@ -132,7 +132,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "025",
                   "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
                   "menu": ["product realiability", "quick test"],
                   "link": ""
@@ -149,7 +149,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "025",
                   "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
                   "menu": ["product realiability", "quick test"],
                   "link": ""
@@ -171,8 +171,8 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
-                "text": `Opens the PDF link for the document. `,
+                "sequenceId": "026",
+                "text": `Opens the PDF link for the document.`,
                 "menu": [],
                 "link": ""
               }
@@ -205,7 +205,7 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "027",
                 "text": `Sure`,
                 "menu": [],
                 "category": [
@@ -292,7 +292,7 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "028",
                 "text": `I can see that you didn't completed web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
                 "menu": [],
                 "link": ""
@@ -311,8 +311,8 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
-                "text": `Opens the PDF link for the report. `,
+                "sequenceId": "026",
+                "text": `Opens the PDF link for the document.`,
                 "menu": [],
                 "link": ""
               }
@@ -326,7 +326,7 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "028",
                 "text": `I can see that you didn't completed web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
                 "menu": [],
                 "link": ""

@@ -174,7 +174,9 @@ server.post("/marcedes", function (req, res) {
                 "sequenceId": "026",
                 "text": `Opens the PDF link for the document.`,
                 "menu": [],
-                "link": ""
+                "category":[],
+                "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+                "linkTitle":"download pdf"
               }
             }]
         });
@@ -314,7 +316,9 @@ server.post("/marcedes", function (req, res) {
                 "sequenceId": "026",
                 "text": `Opens the PDF link for the document.`,
                 "menu": [],
-                "link": ""
+                "category":[],
+                "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+                "linkTitle":"download pdf"
               }
             }]
         });

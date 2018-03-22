@@ -11,12 +11,99 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-
+var vivekReport = [];
+var matahisReport = [];
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
   console.log(actions)
   switch (actions) {
+    case "welcome":
+      var name = req.body.result.parameters.name;
+      if (name == "Mathias" || name == "Vivek") {
+        if (name == "Mathias" && matahisReport.length != 0) {
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "003",
+                  "text": `Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again?`,
+                  "menu": [],
+                  "category": [],
+                  "link": "",
+                  "linkTitle": ""
+                }
+              }]
+          });
+        } else if (name == 'vivek' && vivekReport.length != 0) {
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "003",
+                  "text": `Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again?`,
+                  "menu": [],
+                  "category": [],
+                  "link": "",
+                  "linkTitle": ""
+                }
+              }]
+          });
+        } else {
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "003",
+                  "text": `Good Moring $given-name, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
+                  "menu": [],
+                  "category": [],
+                  "link": "",
+                  "linkTitle": ""
+                }
+              }]
+          });
+        }
+      } else {
+        return res.json({
+          "messages": [
+            {
+              "type": 0,
+              "speech": ""
+            }, {
+              "payload": {
+                "sequenceId": "003",
+                "text": `Good Moring $given-name, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
+                "menu": [],
+                "category": [],
+                "link": "",
+                "linkTitle": ""
+              }
+            }]
+        });
+      }
+      break;
+      case 'generated-report':
+      var name = req.body.result.parameters.name;
+      if (name == "Mathias") {
+        return res.json({
+          "messages": matahisReport
+        });
+      }else if(name =="Vivek"){
+        return res.json({
+          "messages": vivekReport
+        });
+      }
+      break;
     case "wbt":
       var name = req.body.result.parameters.name;
       switch (name) {
@@ -174,9 +261,9 @@ server.post("/marcedes", function (req, res) {
                 "sequenceId": "026",
                 "text": `Opens the PDF link for the document.`,
                 "menu": [],
-                "category":[],
+                "category": [],
                 "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
-                "linkTitle":"download pdf"
+                "linkTitle": "download pdf"
               }
             }]
         });
@@ -305,24 +392,48 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias" || name == "Vivek") {
+      if (name == "Mathias") {
+        matahisReport.length = 0;
+        var report = [
+          {
+            "type": 0,
+            "speech": ""
+          }, {
+            "payload": {
+              "sequenceId": "026",
+              "text": `Opens the PDF link for the document.`,
+              "menu": [],
+              "category": [],
+              "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+              "linkTitle": "download pdf"
+            }
+          }];
+          matahisReport.push(report);
         return res.json({
-          "messages": [
-            {
-              "type": 0,
-              "speech": ""
-            }, {
-              "payload": {
-                "sequenceId": "026",
-                "text": `Opens the PDF link for the document.`,
-                "menu": [],
-                "category":[],
-                "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
-                "linkTitle":"download pdf"
-              }
-            }]
+          "messages": report
         });
-      } else {
+      } else if (name == "Vivek") {
+        vivekReport.length = 0;
+        var report = [
+          {
+            "type": 0,
+            "speech": ""
+          }, {
+            "payload": {
+              "sequenceId": "026",
+              "text": `Opens the PDF link for the document.`,
+              "menu": [],
+              "category": [],
+              "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+              "linkTitle": "download pdf"
+            }
+          }];
+          vivekReport.push(report);
+        return res.json({
+          "messages": report
+        });
+      }
+      else {
         return res.json({
           "messages": [
             {

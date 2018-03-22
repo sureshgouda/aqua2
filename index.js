@@ -64,7 +64,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
+                  "text": `Good Moring ${name}, Welcome to AQUA`,
                   "menu": [],
                   "category": [],
                   "link": "",

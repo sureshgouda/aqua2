@@ -64,7 +64,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "text": `Good Moring $given-name, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
+                  "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
                   "menu": [],
                   "category": [],
                   "link": "",
@@ -82,7 +82,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "003",
-                "text": `Good Moring $given-name, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
+                "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
                 "menu": [],
                 "category": [],
                 "link": "",
@@ -92,13 +92,13 @@ server.post("/marcedes", function (req, res) {
         });
       }
       break;
-      case 'generated-report':
+    case 'generated-report':
       var name = req.body.result.parameters.name;
       if (name == "Mathias") {
         return res.json({
           "messages": matahisReport
         });
-      }else if(name =="Vivek"){
+      } else if (name == "Vivek") {
         return res.json({
           "messages": vivekReport
         });
@@ -408,7 +408,7 @@ server.post("/marcedes", function (req, res) {
               "linkTitle": "download pdf"
             }
           }];
-          matahisReport.push(report);
+        matahisReport.push(report);
         return res.json({
           "messages": report
         });
@@ -428,7 +428,7 @@ server.post("/marcedes", function (req, res) {
               "linkTitle": "download pdf"
             }
           }];
-          vivekReport.push(report);
+        vivekReport.push(report);
         return res.json({
           "messages": report
         });

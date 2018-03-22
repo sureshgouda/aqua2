@@ -30,7 +30,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "text": `Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again?`,
+                  "text": `Last time you generated the report for D2A – Quick Test Duration. Should I generate it again? tell me YES or NO.`,
                   "menu": [],
                   "category": [],
                   "link": "",
@@ -38,7 +38,7 @@ server.post("/marcedes", function (req, res) {
                 }
               }]
           });
-        } else if (name == 'vivek' && vivekReport.length != 0) {
+        } else if (vivekReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -104,6 +104,22 @@ server.post("/marcedes", function (req, res) {
         });
       }
       break;
+    case "mainmenu":
+      return res.json({
+        "messages": {
+          "sequenceId": "004",
+          "text": "Please choose one of the following Topics.",
+          "menu": [
+            "What is Aqua",
+            "News and Events",
+            "System Status",
+            "List of WBT",
+            "Type or Reports",
+            "Support"
+          ]
+        }
+      });
+      break
     case "wbt":
       var name = req.body.result.parameters.name;
       switch (name) {

@@ -98,7 +98,7 @@ server.post("/marcedes", function (req, res) {
         return res.json({
           "messages": matahisReport
         });
-      } else if (name == "Vivek") {
+      } else {
         return res.json({
           "messages": vivekReport
         });

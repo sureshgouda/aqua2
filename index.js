@@ -393,7 +393,6 @@ server.post("/marcedes", function (req, res) {
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
       if (name == "Mathias") {
-        // matahisReport.length = 0;
         var report = [
           {
             "type": 0,
@@ -408,12 +407,11 @@ server.post("/marcedes", function (req, res) {
               "linkTitle": "download pdf"
             }
           }];
-        matahisReport.push(report);
+        matahisReport = report;
         return res.json({
           "messages": report
         });
       } else if (name == "Vivek") {
-        // vivekReport.length = 0;
         var report = [
           {
             "type": 0,
@@ -428,7 +426,7 @@ server.post("/marcedes", function (req, res) {
               "linkTitle": "download pdf"
             }
           }];
-        vivekReport.push(report);
+        vivekReport = report;
         return res.json({
           "messages": report
         });

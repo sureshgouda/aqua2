@@ -106,18 +106,26 @@ server.post("/marcedes", function (req, res) {
       break;
     case "mainmenu":
       return res.json({
-        "messages": {
-          "sequenceId": "004",
-          "text": "Please choose one of the following Topics.",
-          "menu": [
-            "What is Aqua",
-            "News and Events",
-            "System Status",
-            "List of WBT",
-            "Type or Reports",
-            "Support"
-          ]
-        }
+        "messages": [
+          {
+            "type": 0,
+            "speech": ""
+          }, {
+            "payload": {
+              "sequenceId": "",
+              "text": "Please choose one of the following Topics.",
+              "menu": [
+                "What is Aqua",
+                "News and Events",
+                "System Status",
+                "List of WBT",
+                "Type or Reports",
+                "Support"
+              ],
+              "link": ""
+            }
+          }]
+
       });
       break
     case "wbt":

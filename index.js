@@ -47,7 +47,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "text": `Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again?`,
+                  "text": `Last time you generated the report for D2A – Quick Test Duration. Should I generate it again? tell me YES or NO.`,
                   "menu": [],
                   "category": [],
                   "link": "",

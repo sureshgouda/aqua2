@@ -64,7 +64,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "text": `Good Moring ${name}, Welcome to AQUA`,
+                  "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
                   "menu": [],
                   "category": [],
                   "link": "",
@@ -393,7 +393,7 @@ server.post("/marcedes", function (req, res) {
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
       if (name == "Mathias") {
-        matahisReport.length = 0;
+        // matahisReport.length = 0;
         var report = [
           {
             "type": 0,
@@ -413,7 +413,7 @@ server.post("/marcedes", function (req, res) {
           "messages": report
         });
       } else if (name == "Vivek") {
-        vivekReport.length = 0;
+        // vivekReport.length = 0;
         var report = [
           {
             "type": 0,

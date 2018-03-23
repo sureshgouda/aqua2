@@ -115,12 +115,30 @@ server.post("/marcedes", function (req, res) {
               "sequenceId": "",
               "text": "Please choose one of the following Topics.",
               "menu": [
-                "What is Aqua",
-                "News and Events",
-                "System Status",
-                "List of WBT",
-                "Type or Reports",
-                "Support"
+                {
+                  "name": "What is Aqua",
+                  "link": "What is Aqua"
+                },
+                {
+                  "name": "News and Events",
+                  "link": "News and Events"
+                },
+                {
+                  "name": "System Status",
+                  "link": "System Status"
+                },
+                {
+                  "name": "List of WBT",
+                  "link": "List of WBT"
+                },
+                {
+                  "name": "Type or Reports",
+                  "link": "Type or Reports"
+                },
+                {
+                  "name": "Support",
+                  "link": "Support"
+                }
               ],
               "link": ""
             }
@@ -174,7 +192,16 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "text": ` Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
-                  "menu": ["training document", "life training document"],
+                  "menu": [
+                    {
+                      "name":"training document",
+                      "link":"training document"
+                    },
+                    {
+                      "name":"life training document",
+                      "link":"life training document"
+                    }
+                  ],
                   "link": ""
                 }
               }]
@@ -190,7 +217,16 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "text": ` Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
-                  "menu": ["training document", "life training document"],
+                  "menu": [
+                    {
+                      "name":"training document",
+                      "link":"training document"
+                    },
+                    {
+                      "name":"life training document",
+                      "link":"life training document"
+                    }
+                  ],
                   "link": ""
                 }
               }]
@@ -245,7 +281,16 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "025",
                   "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-                  "menu": ["product realiability", "quick test"],
+                  "menu": [
+                    {
+                      "name":"product realiability",
+                      "link":"product realiability"
+                    },
+                    {
+                      "name":"quick test",
+                      "link":"quick test"
+                    }
+                  ],
                   "link": ""
                 }
               }]
@@ -262,7 +307,16 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "025",
                   "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-                  "menu": ["product realiability", "quick test"],
+                  "menu": [
+                    {
+                      "name":"product realiability",
+                      "link":"product realiability"
+                    },
+                    {
+                      "name":"quick test",
+                      "link":"quick test"
+                    }
+                  ],
                   "link": ""
                 }
               }]

@@ -29,12 +29,9 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "003",
-                  "text": `Last time you generated the report for D2A – Quick Test Duration. Should I generate it again? tell me YES or NO.`,
-                  "menu": [],
-                  "category": [],
-                  "link": "",
-                  "linkTitle": ""
+                  "sequenceId": "",
+                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
+                  "menu": [ ]
                 }
               }]
           });
@@ -46,12 +43,9 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "003",
-                  "text": `Last time you generated the report for D2A – Quick Test Duration. Should I generate it again? tell me YES or NO.`,
-                  "menu": [],
-                  "category": [],
-                  "link": "",
-                  "linkTitle": ""
+                  "sequenceId": "",
+                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
+                  "menu": [ ]
                 }
               }]
           });
@@ -63,12 +57,30 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "003",
-                  "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
-                  "menu": [],
-                  "category": [],
-                  "link": "",
-                  "linkTitle": ""
+                  "sequenceId": "",
+                  "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
+                  "menu": [
+                    {
+                      "image": "",
+                      "title": "AQUA",
+                      "description": "Advanced Quality Analysis"
+                    },
+                    {
+                      "image": "",
+                      "title": "WBT",
+                      "description": "Web based Training"
+                    },
+                    {
+                      "image": "",
+                      "title": "REPORT",
+                      "description": "Aqua Reports"
+                    },
+                    {
+                      "image": "",
+                      "title": "SUPPORT",
+                      "description": "Find Solution"
+                    }
+                  ]
                 }
               }]
           });
@@ -81,12 +93,30 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "003",
-                "text": `Good Moring ${name}, Welcome to AQUA. Hope you are having a great day so far. How can I help you?`,
-                "menu": [],
-                "category": [],
-                "link": "",
-                "linkTitle": ""
+                "sequenceId": "",
+                "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
+                "menu": [
+                  {
+                    "image": "",
+                    "title": "AQUA",
+                    "description": "Advanced Quality Analysis"
+                  },
+                  {
+                    "image": "",
+                    "title": "WBT",
+                    "description": "Web based Training"
+                  },
+                  {
+                    "image": "",
+                    "title": "REPORT",
+                    "description": "Aqua Reports"
+                  },
+                  {
+                    "image": "",
+                    "title": "SUPPORT",
+                    "description": "Find Solution"
+                  }
+                ]
               }
             }]
         });
@@ -113,34 +143,29 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "text": "Please choose one of the following Topics.",
+              "content": "Please choose one of the following topic.",
               "menu": [
                 {
-                  "name": "What is Aqua",
-                  "link": "What is Aqua"
+                  "image": "",
+                  "title": "AQUA",
+                  "description": "Advanced Quality Analysis"
                 },
                 {
-                  "name": "News and Events",
-                  "link": "News and Events"
+                  "image": "",
+                  "title": "WBT",
+                  "description": "Web based Training"
                 },
                 {
-                  "name": "System Status",
-                  "link": "System Status"
+                  "image": "",
+                  "title": "REPORT",
+                  "description": "Aqua Reports"
                 },
                 {
-                  "name": "List of WBT",
-                  "link": "List of WBT"
-                },
-                {
-                  "name": "Type or Reports",
-                  "link": "Type or Reports"
-                },
-                {
-                  "name": "Support",
-                  "link": "Support"
+                  "image": "",
+                  "title": "SUPPORT",
+                  "description": "Find Solution"
                 }
-              ],
-              "link": ""
+              ]
             }
           }]
 
@@ -158,9 +183,11 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "text": `Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link`,
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link</p><a href=''>Registration form for web based training</a>`,
                   "menu": [],
-                  "link": ""
+                  "news": [],
+                  "events": [],
+                  "support": []
                 }
               }]
           });
@@ -174,9 +201,21 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "text": `Welcome ${name} to WBT. you completed 50% of web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                  "content": `${name} was found to have completed the WBT in a partial manner.  In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
                   "menu": [],
-                  "link": ""
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[
+                    {
+                      "name":"training document",
+                      "link":"training document"
+                    },
+                    {
+                      "name":"life training document",
+                      "link":"life training document"
+                    }
+                  ]
                 }
               }]
 
@@ -191,18 +230,12 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "text": ` Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
-                  "menu": [
-                    {
-                      "name":"training document",
-                      "link":"training document"
-                    },
-                    {
-                      "name":"life training document",
-                      "link":"life training document"
-                    }
-                  ],
-                  "link": ""
+                  "content": `${name} was found to have completed the WBT. now you can access reports.`,
+                  "menu": [],
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[]
                 }
               }]
           });
@@ -216,18 +249,12 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "text": ` Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.`,
-                  "menu": [
-                    {
-                      "name":"training document",
-                      "link":"training document"
-                    },
-                    {
-                      "name":"life training document",
-                      "link":"life training document"
-                    }
-                  ],
-                  "link": ""
+                  "content": `${name} was found to have completed the WBT. now you can access reports.`,
+                  "menu": [],
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[]
                 }
               }]
           });
@@ -243,12 +270,15 @@ server.post("/marcedes", function (req, res) {
               {
                 "type": 0,
                 "speech": ""
+               
               }, {
                 "payload": {
-                  "sequenceId": "023",
-                  "text": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                  "sequenceId": "",
+                  "content": `<p>I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.</p><a href=''>Registration form for web based training</a>`,
                   "menu": [],
-                  "link": ""
+                  "news": [],
+                  "events": [],
+                  "support": []
                 }
               }]
           });
@@ -261,10 +291,22 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "024",
-                  "text": `You completed 50% of web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                  "sequenceId": "",
+                  "content": `${name} was found to have completed the WBT in a partial manner.Let’s continue from where we left off`,
                   "menu": [],
-                  "link": ""
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[
+                    {
+                      "name":"training document",
+                      "link":"training document"
+                    },
+                    {
+                      "name":"life training document",
+                      "link":"life training document"
+                    }
+                  ]
                 }
 
               }]
@@ -279,9 +321,14 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "025",
-                  "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-                  "menu": [
+                  "sequenceId": "",
+                  "content": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
+                  "menu": [],
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[],
+                  "report":[
                     {
                       "name":"product realiability",
                       "link":"product realiability"
@@ -290,8 +337,7 @@ server.post("/marcedes", function (req, res) {
                       "name":"quick test",
                       "link":"quick test"
                     }
-                  ],
-                  "link": ""
+                  ]
                 }
               }]
 
@@ -305,9 +351,14 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "025",
-                  "text": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-                  "menu": [
+                  "sequenceId": "",
+                  "content": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
+                  "menu": [],
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[],
+                  "report":[
                     {
                       "name":"product realiability",
                       "link":"product realiability"
@@ -316,8 +367,7 @@ server.post("/marcedes", function (req, res) {
                       "name":"quick test",
                       "link":"quick test"
                     }
-                  ],
-                  "link": ""
+                  ]
                 }
               }]
           });
@@ -336,10 +386,14 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "026",
-                "text": `Opens the PDF link for the document.`,
+                "sequenceId": "",
+                "content": `Opens the PDF link for the document.`,
                 "menu": [],
-                "category": [],
+                "news": [],
+                "events": [],
+                "support": [],
+                "wbt":[],
+                "report":[],
                 "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
                 "linkTitle": "download pdf"
               }
@@ -372,83 +426,51 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "027",
-                "text": `Sure`,
-                "menu": [],
-                "category": [
-                  {
-                    "name": "Quick test result, fault codes",
-                    "report": [
-                      {
-                        "code": "D1A",
-                        "description": "FC per category, distibuted based on model series"
-                      },
-                      {
-                        "code": "D1B1",
-                        "description": "FC per model series, distribruted based on ECU"
-                      },
-                      {
-                        "code": "D1B2",
-                        "description": "Top control unit faults"
-                      },
-                      {
-                        "code": "D1C1",
-                        "description": "FC per ECU-overview"
-                      },
-                      {
-                        "code": "D1C2",
-                        "description": "FC per ECU-overview(interactive)"
-                      },
-                      {
-                        "code": "D1C3",
-                        "description": "FC per ECU-overview with fault type and FC prompt"
-                      },
-                      {
-                        "code": "D1D",
-                        "description": "Faded pit fault codes"
-                      },
-                      {
-                        "code": "D1E1",
-                        "description": "FIN-based fault code history"
-                      },
-                      {
-                        "code": "D1E2",
-                        "description": "Fault code histor FIN-based with fault text"
-                      },
-                      {
-                        "code": "D1F",
-                        "description": "Quick test result"
-                      },
-                      {
-                        "code": "D1G",
-                        "description": "Fault codes of individual vehicle diagostics"
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Diagnosis and repair procedure",
-                    "report": [
-                      {
-                        "code": "D2A",
-                        "description": "Quick test duration"
-                      },
-                      {
-                        "code": "D2B",
-                        "description": "Diagonsis procedure"
-                      },
-                      {
-                        "code": "D2C",
-                        "description": "Fault freeze frame overview(FiN selection)"
-                      },
-                      {
-                        "code": "D2D",
-                        "description": "Fault freeze frame overview(control unit, FC selection)NEW"
-                      }
-                    ]
-                  }
-                ],
-                "link": ""
-              }
+                  "sequenceId": "",
+                  "content": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
+                  "menu": [],
+                  "news": [],
+                  "events": [],
+                  "support": [],
+                  "wbt":[],
+                  "report":[
+                    {
+                      "name":"quality reports",
+                      "link":"quality reports"
+                    },
+                    {
+                      "name":"hit lists",
+                      "link":"hit lists"
+                    },
+                    {
+                      "name":    "distributions",
+                      "link":    "distributions"
+                    },
+                    {
+                      "name":"production reports",
+                      "link":"production reports"
+                    },  {
+                      "name":"audit reports",
+                      "link":"audit reports"
+                    },
+                    {
+                      "name":"special reports",
+                      "link":"special reports"
+                    },
+                    {
+                      "name":"early warning system",
+                      "link":"early warning system"
+                    },
+                    {
+                      "name":"extrapolation",
+                      "link":"extrapolation"
+                    },
+                    {
+                      "name":"other reports",
+                      "link":"other reports"
+                    }
+                  ]
+                }
             }]
         });
       } else {
@@ -459,10 +481,14 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "028",
-                "text": `I can see that you didn't completed web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                "sequenceId": "",
+                "content": `I can see you didn't complete wbt training.`,
                 "menu": [],
-                "link": ""
+                "news": [],
+                "events": [],
+                "support": [],
+                "wbt":[],
+                "report":[]  
               }
             }]
         });
@@ -477,12 +503,16 @@ server.post("/marcedes", function (req, res) {
             "speech": ""
           }, {
             "payload": {
-              "sequenceId": "026",
-              "text": `Opens the PDF link for the document.`,
-              "menu": [],
-              "category": [],
-              "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
-              "linkTitle": "download pdf"
+              "sequenceId": "",
+                "content": `Opens the PDF link for the document.`,
+                "menu": [],
+                "news": [],
+                "events": [],
+                "support": [],
+                "wbt":[],
+                "report":[],
+                "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+                "linkTitle": "download pdf"
             }
           }];
         matahisReport = report;
@@ -496,10 +526,14 @@ server.post("/marcedes", function (req, res) {
             "speech": ""
           }, {
             "payload": {
-              "sequenceId": "026",
-              "text": `Opens the PDF link for the document.`,
+              "sequenceId": "",
+              "content": `Opens the PDF link for the document.`,
               "menu": [],
-              "category": [],
+              "news": [],
+              "events": [],
+              "support": [],
+              "wbt":[],
+              "report":[],
               "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
               "linkTitle": "download pdf"
             }
@@ -517,10 +551,14 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "028",
-                "text": `I can see that you didn't completed web based training. So compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                "sequenceId": "",
+                "content": `I can see you didn't complete wbt training.`,
                 "menu": [],
-                "link": ""
+                "news": [],
+                "events": [],
+                "support": [],
+                "wbt":[],
+                "report":[]       
               }
             }]
         });

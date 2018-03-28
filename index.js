@@ -31,7 +31,7 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
-                  "menu": [ ]
+                  "menu": []
                 }
               }]
           });
@@ -45,7 +45,7 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
-                  "menu": [ ]
+                  "menu": []
                 }
               }]
           });
@@ -61,22 +61,22 @@ server.post("/marcedes", function (req, res) {
                   "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                   "menu": [
                     {
-                      "image": "",
+                      "image": "assets/img/Aqua.png",
                       "title": "AQUA",
                       "description": "Advanced Quality Analysis"
                     },
                     {
-                      "image": "",
+                      "image": "assets/img/WBT.png",
                       "title": "WBT",
                       "description": "Web based Training"
                     },
                     {
-                      "image": "",
+                      "image": "assets/img/Report.png",
                       "title": "REPORT",
                       "description": "Aqua Reports"
                     },
                     {
-                      "image": "",
+                      "image": "assets/img/Support.png",
                       "title": "SUPPORT",
                       "description": "Find Solution"
                     }
@@ -97,22 +97,22 @@ server.post("/marcedes", function (req, res) {
                 "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                 "menu": [
                   {
-                    "image": "",
+                    "image": "assets/img/Aqua.png",
                     "title": "AQUA",
                     "description": "Advanced Quality Analysis"
                   },
                   {
-                    "image": "",
+                    "image": "assets/img/WBT.png",
                     "title": "WBT",
                     "description": "Web based Training"
                   },
                   {
-                    "image": "",
+                    "image": "assets/img/Report.png",
                     "title": "REPORT",
                     "description": "Aqua Reports"
                   },
                   {
-                    "image": "",
+                    "image": "assets/img/Support.png",
                     "title": "SUPPORT",
                     "description": "Find Solution"
                   }
@@ -146,22 +146,22 @@ server.post("/marcedes", function (req, res) {
               "content": "Please choose one of the following topic.",
               "menu": [
                 {
-                  "image": "",
+                  "image": "assets/img/Aqua.png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/WBT.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/Report.png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/Support.png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }
@@ -206,14 +206,14 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[
+                  "wbt": [
                     {
-                      "name":"training document",
-                      "link":"training document"
+                      "name": "training document",
+                      "link": "training document"
                     },
                     {
-                      "name":"life training document",
-                      "link":"life training document"
+                      "name": "life training document",
+                      "link": "life training document"
                     }
                   ]
                 }
@@ -235,7 +235,7 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[]
+                  "wbt": []
                 }
               }]
           });
@@ -254,7 +254,7 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[]
+                  "wbt": []
                 }
               }]
           });
@@ -270,7 +270,7 @@ server.post("/marcedes", function (req, res) {
               {
                 "type": 0,
                 "speech": ""
-               
+
               }, {
                 "payload": {
                   "sequenceId": "",
@@ -297,14 +297,14 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[
+                  "wbt": [
                     {
-                      "name":"training document",
-                      "link":"training document"
+                      "name": "training document",
+                      "link": "training document"
                     },
                     {
-                      "name":"life training document",
-                      "link":"life training document"
+                      "name": "life training document",
+                      "link": "life training document"
                     }
                   ]
                 }
@@ -327,15 +327,15 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[],
-                  "report":[
+                  "wbt": [],
+                  "report": [
                     {
-                      "name":"product realiability",
-                      "link":"product realiability"
+                      "name": "product realiability",
+                      "link": "product realiability"
                     },
                     {
-                      "name":"quick test",
-                      "link":"quick test"
+                      "name": "quick test",
+                      "link": "quick test"
                     }
                   ]
                 }
@@ -357,15 +357,15 @@ server.post("/marcedes", function (req, res) {
                   "news": [],
                   "events": [],
                   "support": [],
-                  "wbt":[],
-                  "report":[
+                  "wbt": [],
+                  "report": [
                     {
-                      "name":"product realiability",
-                      "link":"product realiability"
+                      "name": "product realiability",
+                      "link": "product realiability"
                     },
                     {
-                      "name":"quick test",
-                      "link":"quick test"
+                      "name": "quick test",
+                      "link": "quick test"
                     }
                   ]
                 }
@@ -392,8 +392,8 @@ server.post("/marcedes", function (req, res) {
                 "news": [],
                 "events": [],
                 "support": [],
-                "wbt":[],
-                "report":[],
+                "wbt": [],
+                "report": [],
                 "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
                 "linkTitle": "download pdf"
               }
@@ -426,51 +426,51 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                  "sequenceId": "",
-                  "content": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
-                  "menu": [],
-                  "news": [],
-                  "events": [],
-                  "support": [],
-                  "wbt":[],
-                  "report":[
-                    {
-                      "name":"quality reports",
-                      "link":"quality reports"
-                    },
-                    {
-                      "name":"hit lists",
-                      "link":"hit lists"
-                    },
-                    {
-                      "name":    "distributions",
-                      "link":    "distributions"
-                    },
-                    {
-                      "name":"production reports",
-                      "link":"production reports"
-                    },  {
-                      "name":"audit reports",
-                      "link":"audit reports"
-                    },
-                    {
-                      "name":"special reports",
-                      "link":"special reports"
-                    },
-                    {
-                      "name":"early warning system",
-                      "link":"early warning system"
-                    },
-                    {
-                      "name":"extrapolation",
-                      "link":"extrapolation"
-                    },
-                    {
-                      "name":"other reports",
-                      "link":"other reports"
-                    }
-                  ]
-                }
+                "sequenceId": "",
+                "content": `AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.`,
+                "menu": [],
+                "news": [],
+                "events": [],
+                "support": [],
+                "wbt": [],
+                "report": [
+                  {
+                    "name": "quality reports",
+                    "link": "quality reports"
+                  },
+                  {
+                    "name": "hit lists",
+                    "link": "hit lists"
+                  },
+                  {
+                    "name": "distributions",
+                    "link": "distributions"
+                  },
+                  {
+                    "name": "production reports",
+                    "link": "production reports"
+                  }, {
+                    "name": "audit reports",
+                    "link": "audit reports"
+                  },
+                  {
+                    "name": "special reports",
+                    "link": "special reports"
+                  },
+                  {
+                    "name": "early warning system",
+                    "link": "early warning system"
+                  },
+                  {
+                    "name": "extrapolation",
+                    "link": "extrapolation"
+                  },
+                  {
+                    "name": "other reports",
+                    "link": "other reports"
+                  }
+                ]
+              }
             }]
         });
       } else {
@@ -487,8 +487,8 @@ server.post("/marcedes", function (req, res) {
                 "news": [],
                 "events": [],
                 "support": [],
-                "wbt":[],
-                "report":[]  
+                "wbt": [],
+                "report": []
               }
             }]
         });
@@ -504,15 +504,15 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-                "content": `Opens the PDF link for the document.`,
-                "menu": [],
-                "news": [],
-                "events": [],
-                "support": [],
-                "wbt":[],
-                "report":[],
-                "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
-                "linkTitle": "download pdf"
+              "content": `Opens the PDF link for the document.`,
+              "menu": [],
+              "news": [],
+              "events": [],
+              "support": [],
+              "wbt": [],
+              "report": [],
+              "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
+              "linkTitle": "download pdf"
             }
           }];
         matahisReport = report;
@@ -532,8 +532,8 @@ server.post("/marcedes", function (req, res) {
               "news": [],
               "events": [],
               "support": [],
-              "wbt":[],
-              "report":[],
+              "wbt": [],
+              "report": [],
               "link": "assets/TIPS-AQUA-Anwendertag-EN.pdf",
               "linkTitle": "download pdf"
             }
@@ -557,14 +557,14 @@ server.post("/marcedes", function (req, res) {
                 "news": [],
                 "events": [],
                 "support": [],
-                "wbt":[],
-                "report":[]       
+                "wbt": [],
+                "report": []
               }
             }]
         });
       }
       break;
-      case "default-fallback":
+    case "default-fallback":
       return res.json({
         "messages": [
           {
@@ -576,26 +576,26 @@ server.post("/marcedes", function (req, res) {
               "content": "Sorry, I don't  understand your question.Let’s take you to the main menu",
               "menu": [
                 {
-                  "image": "",
+                  "image": "assets/img/Aqua.png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/WBT.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/Report.png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "",
+                  "image": "assets/img/Support.png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }
-              ]    
+              ]
             }
           }]
       });

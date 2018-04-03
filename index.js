@@ -281,7 +281,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                  "content": `I can see that you are new user If you are a new user compete all the Web based training in order to generate report. Click on below link for WBT.`,
                   "wbt": [
                     {
                       "wbtForm": {

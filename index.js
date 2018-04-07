@@ -22,8 +22,8 @@ server.post("/marcedes", function (req, res) {
   switch (actions) {
     case "welcome":
       var name = req.body.result.parameters.name;
-      if (name == "Ralf" || name == "Nicole") {
-        if (name == "Ralf" && matahisReport.length != 0) {
+      if (name == "Rahul" || name == "Nicole") {
+        if (name == "Rahul" && matahisReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -124,7 +124,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'generated-report':
       var name = req.body.result.parameters.name;
-      if (name == "Ralf") {
+      if (name == "Rahul") {
         return res.json({
           "messages": matahisReport
         });
@@ -241,7 +241,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Ralf":
+        case "Rahul":
           return res.json({
             "messages": [
               {
@@ -315,7 +315,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Ralf":
+        case "Rahul":
           return res.json({
             "messages": [
               {
@@ -419,7 +419,7 @@ server.post("/marcedes", function (req, res) {
 
     case "training-info":
       var name = req.body.result.parameters.name;
-      if (name != "Ralf" || name != "Nicole") {
+      if (name != "Rahul" || name != "Nicole") {
         return res.json({
           "messages": [
             {
@@ -459,7 +459,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category':
       var name = req.body.result.parameters.name;
-      if (name == "Ralf" || name == "Nicole") {
+      if (name == "Rahul" || name == "Nicole") {
         return res.json({
           "messages": [
             {
@@ -667,7 +667,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      if (name == "Ralf") {
+      if (name == "Rahul") {
         matahisReportType = req.body.result.parameters.any;
         var reportLink ;
         if(matahisReportType == 'P1A'){

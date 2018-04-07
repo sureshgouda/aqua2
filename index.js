@@ -11,8 +11,10 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-var vivekReport = [];
+var NicoleReport = [];
 var matahisReport = [];
+var matahisReportType;
+var NicoleReportType;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -20,8 +22,8 @@ server.post("/marcedes", function (req, res) {
   switch (actions) {
     case "welcome":
       var name = req.body.result.parameters.name;
-      if (name == "Mathias" || name == "Vivek") {
-        if (name == "Mathias" && matahisReport.length != 0) {
+      if (name == "Ralf" || name == "Nicole") {
+        if (name == "Ralf" && matahisReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -29,13 +31,12 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
-                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
-                  "menu": []
+                  "sequenceId": "003",
+                  "content": `Last time you generated the report for ${matahisReportType} report. Should I generate it again? Tell me YES/NO`
                 }
               }]
           });
-        } else if (vivekReport.length != 0) {
+        } else if (NicoleReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -43,9 +44,8 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
-                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
-                  "menu": []
+                  "sequenceId": "003",
+                  "content": `Last time you generated the report for ${NicoleReportType} report. Should I generate it again? Tell me YES/NO`
                 }
               }]
           });
@@ -57,26 +57,26 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "003",
                   "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                   "menu": [
                     {
-                      "image": "assets/img/Aqua.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "AQUA",
                       "description": "Advanced Quality Analysis"
                     },
                     {
-                      "image": "assets/img/WBT.png",
+                      "image": "assets/img/wbt_icon.png",
                       "title": "WBT",
                       "description": "Web based Training"
                     },
                     {
-                      "image": "assets/img/Report.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "REPORT",
                       "description": "Aqua Reports"
                     },
                     {
-                      "image": "assets/img/Support.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "SUPPORT",
                       "description": "Find Solution"
                     }
@@ -93,26 +93,26 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "003",
                 "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                 "menu": [
                   {
-                    "image": "assets/img/Aqua.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "AQUA",
                     "description": "Advanced Quality Analysis"
                   },
                   {
-                    "image": "assets/img/WBT.png",
+                    "image": "assets/img/wbt_icon.png",
                     "title": "WBT",
                     "description": "Web based Training"
                   },
                   {
-                    "image": "assets/img/Report.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "REPORT",
                     "description": "Aqua Reports"
                   },
                   {
-                    "image": "assets/img/Support.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "SUPPORT",
                     "description": "Find Solution"
                   }
@@ -124,13 +124,13 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'generated-report':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias") {
+      if (name == "Ralf") {
         return res.json({
           "messages": matahisReport
         });
       } else {
         return res.json({
-          "messages": vivekReport
+          "messages": NicoleReport
         });
       }
       break;
@@ -146,22 +146,22 @@ server.post("/marcedes", function (req, res) {
               "content": "Please choose one of the following topic.",
               "menu": [
                 {
-                  "image": "assets/img/Aqua.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }
@@ -184,12 +184,13 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link.`,
-                     "wbt": [
+                  "wbt": [
                     {
                       "wbtForm": {
-                        "img": "assets/img/WBT.png",
+                        "img": "assets/img/wbt_icon.png",
                         "titel": "Registration form for web based training.",
-                        "subTitle": "Register Now"
+                        "subTitle": "Register Now",
+                        "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                       }
                     }
                   ]
@@ -197,7 +198,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Rahul":
+        case "Nitin":
           return res.json({
             "messages": [
               {
@@ -213,12 +214,14 @@ server.post("/marcedes", function (req, res) {
                         {
                           "header": "Tips Training Document",
                           "description": "TIPS training document(Workshop Users day)",
-                          "link": "to the pdf >"
+                          "link": "to the pdf >",
+                          "linkRef":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
                         },
                         {
                           "header": "Micostatergy Online Course 9",
                           "description": "The Online course offer an indtroduction in Micostatergy Business Intelligence. the usage of Microstrategy Web..",
-                          "link": "download >"
+                          "link": "to the link >",
+                          "linkRef":"http://aqua.intra.corpintra.net/downloads/BICC/Einfuehrung/WBT_MSTR9/03_wbt_09_00_en/WEBRA-WEBPRO/MSTR_launch.html"
                         },
                         {
                           "header": "AQUA Tips and Tricks",
@@ -238,7 +241,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Mathias":
+        case "Ralf":
           return res.json({
             "messages": [
               {
@@ -252,7 +255,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Vivek":
+        case "Nicole":
           return res.json({
             "messages": [
               {
@@ -280,14 +283,15 @@ server.post("/marcedes", function (req, res) {
 
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "117",
                   "content": `I can see that you are new user If you are a new user compete all the Web based training in order to generate report. Click on below link for WBT.`,
                   "wbt": [
                     {
                       "wbtForm": {
-                        "img": "assets/img/WBT.png",
+                        "img": "assets/img/wbt_icon.png",
                         "titel": "Registration form for web based training.",
-                        "subTitle": "Register Now"
+                        "subTitle": "Register Now",
+                        "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                       }
                     }
                   ]
@@ -295,7 +299,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Rahul":
+        case "Nitin":
           return res.json({
             "messages": [
               {
@@ -304,40 +308,14 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} was found to have completed the WBT in a partial manner.Let’s continue from where we left off`,
-                  "wbt": [
-                    {
-                      "wbtList": [
-                        {
-                          "header": "Tips Training Document",
-                          "description": "TIPS training document(Workshop Users day)",
-                          "link": "to the pdf >"
-                        },
-                        {
-                          "header": "Micostatergy Online Course 9",
-                          "description": "The Online course offer an indtroduction in Micostatergy Business Intelligence. the usage of Microstrategy Web..",
-                          "link": "download >"
-                        },
-                        {
-                          "header": "AQUA Tips and Tricks",
-                          "description": "AQUA Tips & Tricks training document(Workshop WSUM 2015)",
-                          "link": "download >"
-                        },
-                        {
-                          "header": "Reports on Inspection",
-                          "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
-                          "link": "download >"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": `I’m sorry ${name} It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
                 }
 
               }]
 
           });
           break;
-        case "Mathias":
+        case "Ralf":
           return res.json({
             "messages": [
               {
@@ -345,7 +323,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "105",
                   "content": "AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.",
                   "report": [
                     {
@@ -386,7 +364,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Vivek":
+        case "Nicole":
           return res.json({
             "messages": [
               {
@@ -394,7 +372,7 @@ server.post("/marcedes", function (req, res) {
                 "speech": ""
               }, {
                 "payload": {
-                  "sequenceId": "",
+                  "sequenceId": "105",
                   "content": "AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.",
                   "report": [
                     {
@@ -441,7 +419,7 @@ server.post("/marcedes", function (req, res) {
 
     case "training-info":
       var name = req.body.result.parameters.name;
-      if (name != "Mathias" || name != "Vivek") {
+      if (name != "Ralf" || name != "Nicole") {
         return res.json({
           "messages": [
             {
@@ -449,14 +427,15 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "109",
                 "content": "Opens the PDF link for the document. ",
                 "wbt": [
                   {
                     "wbtForm": {
                       "img": "assets/img/pdf.png",
                       "titel": "Tips training.pdf",
-                      "subTitle": "Open"
+                      "subTitle": "Open",
+                      "link":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
                     }
                   }
                 ]
@@ -480,7 +459,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias" || name == "Vivek") {
+      if (name == "Ralf" || name == "Nicole") {
         return res.json({
           "messages": [
             {
@@ -488,7 +467,7 @@ server.post("/marcedes", function (req, res) {
               "speech": ""
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "106",
                 "content": "Please choose one of the following Product Reliability category.",
                 "report": [
                   {
@@ -498,64 +477,118 @@ server.post("/marcedes", function (req, res) {
                         {
                           "title": "Quality reports",
                           "subCategory": [
-                            "P1A",
-                            "P1D"
+                            {
+                              "type": "P1A",
+                              "tooltipContent": "Complaints per month of production "
+                            },
+                            {
+                              "type": "P1D",
+                              "tooltipContent": "Complaints per month of production by distance"
+                            }
                           ]
                         },
                         {
                           "title": "Hit lists",
                           "subCategory": [
-                            "P1B",
-                            "P1C"
+                            {
+                              "type": "P1B",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1C",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Distributions",
                           "subCategory": [
-                            "P1C1",
-                            "P1E"
+                            {
+                              "type": "P1C1",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1E",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Production reports",
                           "subCategory": [
-                            "P1F",
-                            "P1G"
+                            {
+                              "type": "P1F",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1G",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Audit reports",
                           "subCategory": [
-                            "P1G1",
-                            "P1H"
+                            {
+                              "type": "P1G1",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1H",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Special reports",
                           "subCategory": [
-                            "P1I",
-                            "P1J"
+                            {
+                              "type": "P1I",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1J",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Early warning system",
                           "subCategory": [
-                            "P1K",
-                            "P1L"
+                            {
+                              "type": "P1K",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1L",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Extrapolation",
                           "subCategory": [
-                            "P1M",
-                            "P1N"
+                            {
+                              "type": "P1M",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1N",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Other reports",
                           "subCategory": [
-                            "P1O",
-                            "P1P"
+                            {
+                              "type": "P1O",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1P",
+                              "tooltipContent": "two"
+                            }
                           ]
                         }
                       ]
@@ -574,14 +607,15 @@ server.post("/marcedes", function (req, res) {
 
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "117",
                 "content": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
                 "wbt": [
                   {
                     "wbtForm": {
-                      "img": "assets/img/WBT.png",
+                      "img": "assets/img/wbt_icon.png",
                       "titel": "Registration form for web based training.",
-                      "subTitle": "Register Now"
+                      "subTitle": "Register Now",
+                      "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                     }
                   }
                 ]
@@ -633,43 +667,57 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias") {
-        var report = [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "content": "$any Report is generated based on following information. Now you can download.",
-              "report": [
-                {
-                  "reportLink": ""
-                }
-              ]
-            }
-          }];
+      if (name == "Ralf") {
+        matahisReportType = req.body.result.parameters.any;
+        var reportLink ;
+        if(matahisReportType == 'P1A'){
+          reportLink = "assets/P1A 20180316044508632.xlsx";
+        }else{
+          reportLink = "assets/P1D 20180316045237963.xlsx";
+        }
+       var report = [
+        {
+          "type": 0,
+          "speech": ""
+
+        }, {
+          "payload": {
+            "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
+            "report": [
+              {
+                "reportLink":`${reportLink}`
+              }
+            ]
+          }
+        }];
         matahisReport = report;
         return res.json({
           "messages": report
         });
-      } else if (name == "Vivek") {
-        var report = [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "content": "$any Report is generated based on following information. Now you can download.",
-              "report": [
-                {
-                  "reportLink": ""
-                }
-              ]
-            }
-          }];
-        vivekReport = report;
+      } else if (name == "Nicole") {
+       NicoleReportType = req.body.result.parameters.any;
+       var reportLink ;
+       if(NicoleReportType == 'P1A'){
+         reportLink = "assets/P1A 20180316044508632.xlsx";
+       }else{
+         reportLink = "assets/P1D 20180316045237963.xlsx";
+       }
+       var report = [
+        {
+          "type": 0,
+          "speech": ""
+
+        }, {
+          "payload": {
+            "content": `${NicoleReportType} Report is generated based on following information. Now you can download.`,
+            "report": [
+              {
+                "reportLink":`${reportLink}`
+              }
+            ]
+          }
+        }];
+        NicoleReport = report;
         return res.json({
           "messages": report
         });
@@ -683,14 +731,15 @@ server.post("/marcedes", function (req, res) {
 
             }, {
               "payload": {
-                "sequenceId": "",
+                "sequenceId": "117",
                 "content": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
                 "wbt": [
                   {
                     "wbtForm": {
-                      "img": "assets/img/WBT.png",
+                      "img": "assets/img/wbt_icon.png",
                       "titel": "Registration form for web based training.",
-                      "subTitle": "Register Now"
+                      "subTitle": "Register Now",
+                      "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                     }
                   }
                 ]
@@ -707,26 +756,26 @@ server.post("/marcedes", function (req, res) {
             "speech": ""
           }, {
             "payload": {
-              "sequenceId": "",
+              "sequenceId": "118",
               "content": "Sorry, I don't  understand your question.Let’s take you to the main menu",
               "menu": [
                 {
-                  "image": "assets/img/Aqua.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }

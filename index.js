@@ -244,8 +244,8 @@ server.post("/marcedes", function (req, res) {
 
               }, {
                 "payload": {
-                  "sequenceId": "117",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                  "sequenceId": "",
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to reports, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -776,6 +776,106 @@ server.post("/marcedes", function (req, res) {
             }
           }]
       });
+      break;
+
+      case 'direct-report':
+      var name = req.body.result.parameters.name;
+      switch (name) {
+        case "Lakshmi":
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+
+              }, {
+                "payload": {
+                  "sequenceId": "",
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to report, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                  "wbt": [
+                    {
+                      "wbtForm": {
+                        "img": "assets/img/wbt_icon.png",
+                        "titel": "Registration form for web based training.",
+                        "subTitle": "Register Now",
+                        "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
+                      }
+                    }
+                  ]
+                }
+              }]
+          });
+          break;
+        case "Nitin":
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "",
+                  "content": `I’m sorry ${name} It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
+                }
+
+              }]
+
+          });
+          break;
+        case "Ralph":
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "107",
+                  "content": "Please select one of the following attributes to generate the report",
+                  "report": [
+                    {
+                      "title": "Attributes",
+                      "user": "Vehicle attribute",
+                      "attributes": [
+                        "Vehicle",
+                        "Engine",
+                        "axles"
+                      ]
+                    }
+                  ]
+                }
+              }]
+
+          });
+          break;
+        case "Nicole":
+          return res.json({
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "107",
+                  "content": "Please select one of the following attributes to generate the report",
+                  "report": [
+                    {
+                      "title": "Attributes",
+                      "user": "Vehicle attribute",
+                      "attributes": [
+                        "Vehicle",
+                        "Engine",
+                        "axles"
+                      ]
+                    }
+                  ]
+                }
+              }]
+
+          });
+          break;
+
+      }
       break;
   }
 });

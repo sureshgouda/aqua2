@@ -109,19 +109,19 @@ server.post("/marcedes", function (req, res) {
                   "user": "What is AQUA?"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training",
                   "user": "Could you take me to the WBT section?"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/report_icon.png",
                   "title": "REPORT",
                   "description": "Aqua Reports",
                   "user": "Could you take me to the Reports section?"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/support_icon.png",
                   "title": "SUPPORT",
                   "description": "Find Solution",
                   "user": "Could you take me to the Support section?"
@@ -249,7 +249,7 @@ server.post("/marcedes", function (req, res) {
                   "wbt": [
                     {
                       "wbtForm": {
-                        "img": "assets/img/WBT.png",
+                        "img": "assets/img/wbt_icon.png",
                         "titel": "Registration form for web based training.",
                         "subTitle": "Register Now",
                         "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -724,7 +724,7 @@ server.post("/marcedes", function (req, res) {
                 "wbt": [
                   {
                     "wbtForm": {
-                      "img": "assets/img/WBT.png",
+                      "img": "assets/img/wbt_icon.png",
                       "titel": "Registration form for web based training.",
                       "subTitle": "Register Now",
                       "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -754,19 +754,19 @@ server.post("/marcedes", function (req, res) {
                   "user": "What is AQUA?"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training",
                   "user": "Could you take me to the WBT section?"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/report_icon.png",
                   "title": "REPORT",
                   "description": "Aqua Reports",
                   "user": "Could you take me to the Reports section?"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/support_icon.png",
                   "title": "SUPPORT",
                   "description": "Find Solution",
                   "user": "Could you take me to the Support section?"

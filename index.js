@@ -20,7 +20,7 @@ server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
   console.log(actions)
   switch (actions) {
-    case "welcome":
+    case "users":
       var name = req.body.result.parameters.name;
       if (name == "Ralph" || name == "Nicole") {
         if (name == "Ralph" && matahisReport.length != 0) {

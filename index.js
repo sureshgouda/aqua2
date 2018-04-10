@@ -32,7 +32,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": `Hello ${name}, Last time you generated the report for ${matahisReportType} report. Should I generate it again? Tell me YES/NO`
+                  "content": `Hello ${name}, Last time you generated the report for ${matahisReportType}. Should I generate it again? YES or NO`
                 }
               }]
           });
@@ -45,7 +45,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": `Hello ${name}, Last time you generated the report for ${NicoleReportType} report. Should I generate it again? Tell me YES/NO`
+                  "content": `Hello ${name}, Last time you generated the report for ${NicoleReportType}. Should I generate it again? YES or NO`
                 }
               }]
           });
@@ -437,7 +437,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "106",
-                "content": "Please choose one of the following Product Reliability category.",
+                "content": "Please choose one of the following Product Reliability categories.",
                 "report": [
                   {
                     "category": {

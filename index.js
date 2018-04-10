@@ -99,8 +99,8 @@ server.post("/marcedes", function (req, res) {
             "speech": ""
           }, {
             "payload": {
-              "sequenceId": "",
-              "content": "Here are some Frequently Asked Questions. You may select one from the list.",
+              "sequenceId": "102",
+              "content": "Kindly select one from the list.",
               "menu": [
                 {
                   "image": "assets/img/aqua_icon.png",
@@ -144,7 +144,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                  "content": `<p> Welcome ${name}, to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -168,7 +168,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": "$name was found to have partially completed the WBT. Let’s continue from where we left off",
+                  "content": `Let’s continue from where we left off.`,
                   "wbt": [
                     {
                       "wbtList": [
@@ -211,7 +211,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} you have already completed the WBT. Would you like to access Reports?`
+                  "content": `${name}, you have already completed the WBT. Would you like to access Reports?`
                 }
               }]
           });
@@ -225,7 +225,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} you have already completed the WBT. Would you like to access Reports?`
+                  "content": `${name}, you have already completed the WBT. Would you like to access Reports?`
                 }
               }]
           });
@@ -245,7 +245,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to reports, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                  "content": `<p> Welcome ${name}, to WBT. In order to get access to reports, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -269,7 +269,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `I’m sorry ${name} It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
+                  "content": `I’m sorry ${name}, It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
                 }
 
               }]
@@ -420,7 +420,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "",
-                "content": `${name} was found to have completed the WBT. now you can access reports.`
+                "content": `${name}, was found to have completed the WBT. now you can access reports.`
               }
             }]
         });
@@ -437,7 +437,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "106",
-                "content": "Please choose one of the following Product Reliability category.",
+                "content": "Please choose one of the following Product Reliability categories.",
                 "report": [
                   {
                     "category": {
@@ -454,7 +454,7 @@ server.post("/marcedes", function (req, res) {
                             },
                             {
                               "type": "P1D - Complaints per production month after operating time (Q21)",
-                              "tooltipContent": "Complaints per month of production by distance",
+                              "tooltipContent": "Usage Presentation of the number of damages claimed, broken down into the months of production, given for vehicles of the same operating time.",
                               "user": "could you give me  P1D report information?"
                             }
                           ]
@@ -595,8 +595,8 @@ server.post("/marcedes", function (req, res) {
 
             }, {
               "payload": {
-                "sequenceId": "117",
-                "content": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                "sequenceId": "",
+                "content": `<p> Hello ${name}, In order to get access to reports, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                 "wbt": [
                   {
                     "wbtForm": {
@@ -619,7 +619,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "",
-                "content": "$name was found to have partially completed the WBT. Let’s continue from where we left off",
+                "content": `Let’s continue from where we left off.`,
                 "wbt": [
                   {
                     "wbtList": [
@@ -672,6 +672,7 @@ server.post("/marcedes", function (req, res) {
 
           }, {
             "payload": {
+              "sequenceId": "",
               "content": `${matahisReportType} report is generated based on the following Vehicle Attributes. Please download the report`,
               "report": [
                 {
@@ -699,6 +700,7 @@ server.post("/marcedes", function (req, res) {
 
           }, {
             "payload": {
+              "sequenceId": "",
               "content": `${NicoleReportType} report is generated based on the following Vehicle Attributes. Please download the report`,
               "report": [
                 {
@@ -722,7 +724,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "",
-                "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                "content": `<p> Welcome ${name}, to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                 "wbt": [
                   {
                     "wbtForm": {
@@ -792,7 +794,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to report, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
+                  "content": `<p> Welcome ${name}, to WBT. In order to get access to report, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -816,7 +818,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `I’m sorry ${name} It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
+                  "content": `I’m sorry ${name}, It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
                 }
 
               }]
@@ -840,7 +842,7 @@ server.post("/marcedes", function (req, res) {
                       "attributes": [
                         "Vehicle",
                         "Engine",
-                        "axles"
+                        "Axle"
                       ]
                     }
                   ]
@@ -866,7 +868,7 @@ server.post("/marcedes", function (req, res) {
                       "attributes": [
                         "Vehicle",
                         "Engine",
-                        "axles"
+                        "Axle"
                       ]
                     }
                   ]

@@ -22,8 +22,8 @@ server.post("/marcedes", function (req, res) {
   switch (actions) {
     case "welcome":
       var name = req.body.result.parameters.name;
-      if (name == "Ralph" || name == "Nicole") {
-        if (name == "Ralph" && matahisReport.length != 0) {
+      if (name == "Matthias" || name == "Nicole") {
+        if (name == "Matthias" && matahisReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -81,7 +81,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'generated-report':
       var name = req.body.result.parameters.name;
-      if (name == "Ralph") {
+      if (name == "Matthias") {
         return res.json({
           "messages": matahisReport
         });
@@ -202,7 +202,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Ralph":
+        case "Matthias":
           return res.json({
             "messages": [
               {
@@ -276,7 +276,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Ralph":
+        case "Matthias":
           return res.json({
             "messages": [
               {
@@ -388,7 +388,7 @@ server.post("/marcedes", function (req, res) {
 
     case "training-info":
       var name = req.body.result.parameters.name;
-      if (name != "Ralph" || name != "Nicole") {
+      if (name != "Matthias" || name != "Nicole") {
         return res.json({
           "messages": [
             {
@@ -428,7 +428,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category':
       var name = req.body.result.parameters.name;
-      if (name == "Ralph" || name == "Nicole") {
+      if (name == "Matthias" || name == "Nicole") {
         return res.json({
           "messages": [
             {
@@ -657,7 +657,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      if (name == "Ralph") {
+      if (name == "Matthias") {
         matahisReportType = req.body.result.parameters.any;
         var reportLink;
         if (matahisReportType == 'P1A') {
@@ -825,7 +825,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Ralph":
+        case "Matthias":
           return res.json({
             "messages": [
               {

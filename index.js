@@ -62,8 +62,8 @@ server.post("/marcedes", function (req, res) {
                    "emojis": {
     "emojiFlag": true,
     "happy": "That's awesome! What can I do for you?",
-    "unwell": "I am unwell",
-    "sleepy": "I am feeling sleepy",
+    "unwell": "Oh dang! These viruses I tell you. They affect me too. I can make things a little easier for you. Click on one of the options below",
+    "sleepy": "Rise and shine! I can give you a head start by fetching some reports. Or just pick an action for me to take. ",
     "sad": "I am feeling sad"
   }
                 }
@@ -83,9 +83,9 @@ server.post("/marcedes", function (req, res) {
                  "emojis": {
     "emojiFlag": true,
     "happy": "That's awesome! What can I do for you?",
-    "unwell": "I am unwell",
-    "sleepy": "I am feeling sleepy",
-    "sad": "I am feeling sad"
+    "unwell": "Oh dang! These viruses I tell you. They affect me too. I can make things a little easier for you. Click on one of the options below ",
+    "sleepy": "Rise and shine! I can give you a head start by fetching some reports. Or just pick an action for me to take. ",
+    "sad": "Take a deep breath and then let’s begin"
   }
 
               }

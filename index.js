@@ -58,7 +58,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": "Hi, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?",
+                  "content": "Hi ${name}, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?",
                    "emojis": {
     "emojiFlag": true,
     "happy": "That's awesome! What can I do for you?",
@@ -79,7 +79,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "003",
-                "content": "Hi, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?",
+                "content": "Hi ${name}, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?",
                  "emojis": {
     "emojiFlag": true,
     "happy": "That's awesome! What can I do for you?",

@@ -17,7 +17,7 @@ var matahisReportType;
 var NicoleReportType;
 
 server.post("/marcedes", function (req, res) {
-    var lang = req.body.result.lang;
+    var lang = req.body.lang;
   var actions = req.body.result.action;
   console.log(actions)
     if(lang=='en'){

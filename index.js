@@ -19,6 +19,7 @@ var NicoleReportType;
 server.post("/marcedes", function (req, res) {
     var lang = req.body.lang;
   var actions = req.body.result.action;
+  alert(lang);
   console.log(actions)
     if(lang=='en'){
   switch (actions) {

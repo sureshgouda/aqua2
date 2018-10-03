@@ -763,7 +763,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "118",
-              "content": "Sorry, I don't  understand your question.Let me take you to the main menu.",
+              "content": "I'm not sure I know the answer to that, but I can help you with these",
               "menu": [
                 {
                   "image": "assets/img/aqua_icon.png",
